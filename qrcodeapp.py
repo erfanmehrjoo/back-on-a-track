@@ -10,6 +10,7 @@ def genrate_qrcode(text):
     qr.add_data(text)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
-    img.save("qrcode.png")  
-    
-genrate_qrcode("erfan mehrjoo")
+    img.save(f"{text}.png")  
+
+url = input("Enter your url to become qrcode for that shit: ")
+genrate_qrcode(url)
